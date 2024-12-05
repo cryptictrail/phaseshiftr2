@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Page</title>
+    <title>Cryptic Trail Round 2</title>
     <style>
         /* Reset default styling */
         * {
@@ -76,6 +76,7 @@
             width: 100%;
             height: auto;
             max-width: 300px; /* You can adjust this based on the GIF size */
+            cursor: pointer; /* Makes the GIF clickable */
         }
 
     </style>
@@ -89,6 +90,25 @@
             e.preventDefault();
         }
     });
+
+    // Toggle audio play/pause when clicking the GIF
+    function toggleAudio() {
+        const audio = document.getElementById('audio');
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
+
+    // Reduce the volume of the audio (set volume to 20%)
+    function setVolume() {
+        const audio = document.getElementById('audio');
+        audio.volume = 0.4; // Set the volume to 20% of the maximum
+    }
+
+    // Set the volume when the page loads
+    window.onload = setVolume;
 </script>
 
 <!-- Background Image -->
@@ -98,8 +118,8 @@
 <div class="container">
     <!-- First Content with GIF in h1 -->
     <div class="content">
-        <h1><img src="digital-hunt.gif" alt="Digital Hunt GIF"></h1>
-        <p>Your ultimate digital adventure awaits. Click the link below to download the resources!</p>
+        <h1><img src="digital-hunt.gif" alt="Digital Hunt GIF" onclick="toggleAudio()"></h1>
+        <p>Your ultimate digital adventure awaits. Click the GIF to play/pause the music!</p>
     </div>
 
     <!-- Second Content -->
@@ -107,6 +127,9 @@
         <a href="Final_Hunt.zip" class="download-link" download>Download ZIP File</a>
     </div>
 </div>
+
+<!-- Audio Element -->
+<audio id="audio" src="indiana_jones_theme.mp3" preload="auto"></audio>
 
 </body>
 </html>
