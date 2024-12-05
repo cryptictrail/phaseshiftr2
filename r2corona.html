@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Internet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            margin: 50px auto;
+            max-width: 800px;
+        }
+        .dino {
+            text-align: left;
+        }
+        .dino img {
+            width: 120px;
+            height: auto;
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+            text-align: left;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+            text-align: left;
+        }
+        .instructions {
+            margin: 20px 0;
+            text-align: left;
+        }
+        .instructions ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin: 10px 0;
+            color: #555;
+        }
+        .instructions li a {
+            color: purple;
+            text-decoration: none;
+        }
+        .instructions li a:hover {
+            text-decoration: underline;
+        }
+        .error-code {
+            margin-top: 20px;
+            color: #999;
+            text-align: left;
+        }
+        .reload {
+            margin-top: 30px;
+            text-align: left; /* Align the button to the left */
+        }
+        .reload button {
+            padding: 5px 10px; /* Reduced size */
+            font-size: 14px; /* Smaller text */
+            background-color: lightgrey; /* Light grey background */
+            color: black; /* Button text color */
+            border: 2px solid grey; /* Grey border */
+            border-radius: 4px; /* Rounded corners */
+            cursor: pointer;
+            margin-top: 10px; /* Space above the button */
+        }
+        .reload button:hover {
+            background-color: #d3d3d3; /* Slightly darker grey on hover */
+            color: black; /* Optional: Keep text color unchanged on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dino">
+            <img src="dino-removebg-preview.png" alt="Dinosaur">
+        </div>
+        <h1>No Internet</h1>
+        <div class="instructions">
+            <p>Try:</p>
+            <ul>
+                <li>Checking the network cables, modem, and router and disinfect them with an alcohol-based sanitizer</li>
+                <li>Reconnecting to Wi-Fi and maintaining a physical distance of 6 feet</li>
+                <li><a href="#">Running Windows Network Diagnostics</a>, wash it for 20 seconds, and cover it with a mask</li>
+            </ul>
+        </div>
+        <div class="error-code">
+            ERR_INTERNET_NOT_DISCONNECTED
+        </div>
+        <div class="reload">
+            <button onclick="location.reload()">Reload</button>
+        </div>
+    </div>
+</body>
+</html>

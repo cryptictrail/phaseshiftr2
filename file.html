@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+    <style>
+        /* Reset default styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Prevent text selection on the entire page */
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            user-select: none; /* Disable text selection on the whole page */
+        }
+
+        /* Background Image */
+        .background {
+            background: url('hacking-background-8fg6goputcw7cwqn.jpg') no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Vertical stack for content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px; /* Space between the divs */
+        }
+
+        /* Content container */
+        .content {
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+            border-radius: 10px;
+            width: 80%; /* Optional: Set a max width for better visuals */
+            top: 20px;
+        }
+
+        /* Heading and Paragraph Styling */
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        /* Link styling for downloading */
+        .download-link {
+            font-size: 1.2em;
+            color: #19181800;
+            text-decoration: underline;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        /* GIF styling inside the h1 */
+        h1 img {
+            width: 100%;
+            height: auto;
+            max-width: 300px; /* You can adjust this based on the GIF size */
+        }
+
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+<!-- Disable inspect element keyboard shortcuts -->
+<script>
+    document.addEventListener('keydown', function (e) {
+        if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 67))) {
+            e.preventDefault();
+        }
+    });
+</script>
+
+<!-- Background Image -->
+<div class="background"></div>
+
+<!-- Centered container -->
+<div class="container">
+    <!-- First Content with GIF in h1 -->
+    <div class="content">
+        <h1><img src="digital-hunt.gif" alt="Digital Hunt GIF"></h1>
+        <p>Your ultimate digital adventure awaits. Click the link below to download the resources!</p>
+    </div>
+
+    <!-- Second Content -->
+    <div>
+        <a href="Final_Hunt.zip" class="download-link" download>Download ZIP File</a>
+    </div>
+</div>
+
+</body>
+</html>

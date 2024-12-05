@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page</title>
+    <style>
+        /* Resetting default margins */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fullscreen background styling */
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Background Image */
+        .background {
+            background: url('hacking-background-8fg6goputcw7cwqn.jpg') no-repeat center center/cover;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* Button Styling */
+        .button-container {
+            margin-top: 20px;
+        }
+        .button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #555;
+        }
+
+        /* Small image styling */
+        .small-image {
+            margin-top: 20px;
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="background">
+    <h1>Welcome to the Interactive Page</h1>
+
+    <!-- Button container -->
+    <div class="button-container">
+        <!-- Button to play audio -->
+        <button class="button" onclick="playAudio()">Play Audio</button>
+
+        <!-- Button with external link -->
+        <button class="button" onclick="window.location.href='index.html'">Home</button>
+    </div>
+
+    <!-- Small image below buttons -->
+    <img src="twitter.png" alt="Small Icon" class="small-image">
+</div>
+
+<!-- Audio element (hidden) -->
+<audio id="audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+
+<script>
+    function playAudio() {
+        var audio = document.getElementById("audio");
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
+</script>
+
+</body>
+</html>

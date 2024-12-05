@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map with Text</title>
+    <style>
+        /* Remove default margins and make image fill the screen */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            position: relative;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* Text overlay styling */
+        .overlay-text {
+            position: absolute;
+            top: 20%; /* Adjust vertical position */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .overlay-text1 {
+            position: absolute;
+            bottom: 100px; /* Adjust vertical position */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .overlay-text h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .overlay-text p {
+            font-size: 1.2em;
+            margin-top: 5px;
+        }
+    </style>
+    <script>
+        // Disable right-click menu
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        // Disable F12 and Ctrl+Shift+I to prevent developer tools opening
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- Image with usemap to fill the page -->
+    <img src="bgg.jpg" alt="Workplace" usemap="#workmap">
+
+    <!-- Overlay text -->
+    <div>
+
+    </div>
+
+    <map name="workmap">
+        <!-- Adjusted coordinates for full-page image -->
+        <area shape="rect" coords="535,420,555,430" alt="Computer" href="https://www.youtube.com/channel/UCP2Hd1d6kaM6zgNkZzVqD2g">
+    </map>
+
+    <div class="overlay-text1">
+        <p>I am Peter Parker.</p>
+    </div>
+</body>
+</html>

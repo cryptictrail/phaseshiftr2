@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Hunt</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: #eee;
+            background-color: #121212;
+            line-height: 1.6;
+        }
+        h1, h2, h3, p {
+            margin-bottom: 16px;
+        }
+        a {
+            color: #03DAC6;
+            text-decoration: none;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            z-index: 100;
+        }
+        .navbar a {
+            color: #eee;
+            padding: 10px 20px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #03DAC6;
+        }
+
+        /* Header */
+        .header {
+            height: 100vh;
+            background: url('hacking-background-8fg6goputcw7cwqn.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: #fff;
+        }
+        .zen-dots-regular {
+            font-family: "Zen Dots", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }   
+        .header h1 {
+            font-size: 3em;
+            font-weight: 700;
+            font-family: "Zen Dots", sans-serif;
+            font-style: normal;
+        }
+        .header h2 {
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-family: "Zen Dots", sans-serif;
+            font-style: normal;
+        }
+
+        /* Sections */
+        .section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .about, .schedule, .contact {
+            text-align: center;
+        }
+        .schedule-details {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .schedule-item {
+            width: 45%;
+            margin-bottom: 20px;
+        }
+
+        /* Prevent-Select Class */
+        .prevent-select {
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
+            color: rgba(0, 0, 0, 0);
+        }
+
+        /* Registration Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 200;
+        }
+        .modal-content {
+            background: #333;
+            padding: 40px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .modal-content input, .modal-content button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+        }
+        .modal-content button {
+            background: #03DAC6;
+            color: #121212;
+            cursor: pointer;
+        }
+        .close-btn {
+            background: #f44336;
+            color: #fff;
+        }
+        .GFG { 
+           background:#03DAC6;
+           border:none;
+           color:#121212;
+           padding: 10px 20px; 
+           border-radius: 5px; 
+           cursor: pointer
+        } 
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: #ccc;
+
+        }
+        footer a {
+            color: #03DAC6;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header / Home -->
+<div class="header" id="home">
+    <h1>DIGITAL HUNT</h1>
+    <h2>Your Ultimate Digital Adventure Awaits!</h2>
+    <h3><b>06.12.2024</b></h3>
+</div>
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!-- About Section -->
+<section class="section about" id="about">
+    <h1>About Digital Hunt</h1>
+    <p>Digital Hunt 2024 is an adrenaline-fueled hacking challenge where participants compete to solve various puzzles and tasks. Whether you're a beginner or an experienced hacker, this event will test your skills and push your limits.</p>
+</section>
+
+<!-- Schedule Section -->
+<section class="section schedule" id="schedule">
+    <h1>Event Schedule</h1>
+    <div class="schedule-details">
+        <div class="schedule-item">
+            <h3>Day 1</h3>
+            <p>Round 1 - 2:00 PM</p>
+            <p>Results Announcement for next Round</p>
+        </div>
+        <div class="schedule-item">
+            <h3>Day 2</h3>
+            <p>Round 2 - 2:00 PM</p>
+            <p>Results Announcement - 4:00 PM</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section contact" id="contact">
+    <h1>JOIN THE HUNT!</h1>
+    <a href="#" class="link prevent-select">next</a>
+    <button type="submit" class="GFG">Click me</button>
+    <a href="valid.html" class="link prevent-select">Start</a>
+</section>
+
+<!-- Footer -->
+ 
+<footer>
+    <p>© 2024 Cryptic Trail. All Rights Reserved.</p>
+</footer>
+<footer>
+
+</footer>
+<script>
+    // Disable right-click
+    document.addEventListener('contextmenu', function (event) {
+        event.preventDefault();
+    });
+
+    // Disable text selection
+    document.addEventListener('selectstart', function (event) {
+        event.preventDefault();
+    });
+
+    // Disable keyboard shortcuts for inspecting elements (F12, Ctrl+Shift+I, etc.)
+    document.addEventListener('keydown', function (event) {
+        // Block F12
+        if (event.keyCode === 123) {
+            event.preventDefault();
+        }
+        // Block Ctrl+Shift+I
+        if (event.ctrlKey && event.shiftKey && event.keyCode === 73) {
+            event.preventDefault();
+        }
+        // Block Ctrl+Shift+C
+        if (event.ctrlKey && event.shiftKey && event.keyCode === 67) {
+            event.preventDefault();
+        }
+        // Block Ctrl+U
+        if (event.ctrlKey && event.keyCode === 85) {
+            event.preventDefault();
+        }
+        // Block Ctrl+Shift+J
+        if (event.ctrlKey && event.shiftKey && event.keyCode === 74) {
+            event.preventDefault();
+        }
+    });
+
+    // Hide source code in console
+    console.log('%cThis site is protected!', 'color: red; font-size: 20px; font-weight: bold;');
+    console.log('%cInspection of this website is discouraged.', 'color: orange; font-size: 16px;');
+</script>
+
+</body>
+</html>

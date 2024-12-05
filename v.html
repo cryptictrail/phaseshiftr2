@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question and Answer Page</title>
+  <style>
+    /* Reset styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    /* Background image styling */
+    body {
+      background-image: url('funbg2.jpg'); /* Replace with your image file */
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    /* Form container styling */
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black box */
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 80%;
+      max-width: 400px;
+    }
+
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    label {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    input[type="text"] {
+      width: 50%; /* Smaller width for the input box */
+      padding: 5px; /* Reduced padding */
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center; /* Center-align text in the box */
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+
+  <script>
+    // Disable right-click menu
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
+
+    // Disable F12 and Ctrl+Shift+I to prevent developer tools opening
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+        e.preventDefault();
+      }
+    });
+
+    // Prevent inspect element or accessing the source code
+    window.onload = function() {
+      // Disable dev tools
+      document.onkeydown = function(e) {
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+          e.preventDefault();
+        }
+      };
+
+      // Disable right-click
+      document.oncontextmenu = function(e) {
+        e.preventDefault();
+      };
+    };
+  </script>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Question</h1>
+    <form id="qaForm">
+      <label for="answer">How many times did he troubles?</label>
+      <input type="text" id="answer" name="answer" placeholder="Type your answer..." required>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="message" style="margin-top: 10px; font-size: 1em;"></p>
+  </div>
+
+  <script>
+    const form = document.getElementById('qaForm');
+    const message = document.getElementById('message');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent form from submitting normally
+
+      const answer = document.getElementById('answer').value.trim();
+
+      if (answer === '') {
+        message.style.color = 'red';
+        message.textContent = 'Please provide an answer!';
+      } else if (answer === '7') {
+        message.style.color = 'green';
+        message.textContent = 'Correct!';
+        
+        // Redirect to the desired link
+        window.location.href = 'file.html'; // Replace with your desired link
+      } else {
+        message.style.color = 'red';
+        message.textContent = 'Incorrect. Try again!';
+      }
+    });
+  </script>
+</body>
+</html>

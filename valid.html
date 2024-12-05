@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validation Page</title>
+    <style>
+        /* Reset default styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full-page background styling */
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: url('bgmain-01.gif') no-repeat center center/cover; /* Replace 'background.jpg' with your image path */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+            padding: 5px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        /* Image styling */
+        .top-image {
+            width: 200px;
+            height: 130px;
+            margin-left: 10px auto;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 80%;
+            margin-bottom: 15px;
+        }
+
+        input[type="password"], input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #d05151;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .error-message {
+            color: #ff4d4d;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Image at the top -->
+        <img src="Nokia_01.png" alt="Logo" class="top-image"> <!-- Replace 'logo.png' with your image path -->
+        <p>777-33-6-666-888-33-0-88-66-66-33-222-33-7777-7777-2-777-999-0-8-44-444-66-4-7777</p>
+        <p>Ignore hyphens</p>
+
+        <!-- Password Validation Form -->
+        <form id="passwordForm">
+            <div class="error-message" id="errorMessage"></div>
+            <label>
+                <input type="password" id="password" placeholder="Enter Password" required>
+                <button type="button" class="toggle-password" id="togglePassword">👁️</button>
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript for password validation
+        document.getElementById('passwordForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+            validatePassword();
+        });
+
+        function validatePassword() {
+            const passwordInput = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Replace 'mypassword' with your desired password
+            const correctPassword = 'remove unnecessary things';
+
+            if (passwordInput === correctPassword) {
+                // Redirect to the desired link
+                window.location.href = 'r2corona.html'; // Replace with your link
+            } else {
+                // Show error message
+                errorMessage.textContent = 'Incorrect password. Please try again.';
+            }
+        }
+
+        // Password viewer toggle
+        const passwordField = document.getElementById('password');
+        const togglePasswordButton = document.getElementById('togglePassword');
+
+        togglePasswordButton.addEventListener('click', function () {
+            const type = passwordField.type === 'password' ? 'text' : 'password';
+            passwordField.type = type;
+
+            // Change the icon/text of the button
+            togglePasswordButton.textContent = type === 'password' ? '👁️' : '🙈';
+        });
+
+        // Prevent right-click menu
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+
+        // Disable developer tools shortcuts
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
+                event.preventDefault();
+            }
+        });
+
+        // Prevent text selection
+        document.body.style.userSelect = 'none';
+    </script>
+</body>
+</html>
